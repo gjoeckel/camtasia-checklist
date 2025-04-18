@@ -85,7 +85,7 @@ body {
 .header-buttons {
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
     margin-left: auto;
 }
 .header-button {
@@ -108,10 +108,11 @@ body {
 }
 /* Secondary action button (Test) */
 #testButton {
-    background-color: #333;
+    color: #222222;
+    background-color: #888888;
 }
 #testButton:hover {
-    background-color: #444;
+    background-color: #777777;
 }
 /* Side Panel Navigation */
 .side-panel {
@@ -153,6 +154,10 @@ body {
 }
 .side-panel a.active {
     /* Removed background-color */
+}
+.side-panel a:focus {
+    outline: 2px solid #000;
+    outline-offset: 2px;
 }
 .side-panel img {
     width: 24px;
@@ -356,6 +361,12 @@ textarea {
     background-color: #fff;
     box-sizing: border-box;
 }
+
+textarea:focus {
+    outline: 2px solid var(--principle-color);
+    outline-offset: -2px;
+    border-color: var(--principle-color);
+}
 /* Star Rating System */
 
 .star {
@@ -518,7 +529,7 @@ footer {
 }
 
 .info-link:focus {
-    outline: 2px solid #0078D4;
+    outline: 2px solid var(--principle-color);
     outline-offset: 2px;
     border-radius: 4px;
 }
